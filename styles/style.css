@@ -76,6 +76,18 @@ body {
 .future-weather > div:last-child {
 	margin: 0 0 0 0;
 }
+.future-weather > div > div {
+	margin: 10px 0 0 0;
+	display: flex;
+}
+
+.future-weather > div > div > span {
+	font-size: 2.5rem;
+}
+
+.future-weather > div > div > img {
+	/* border: 1px solid black; */
+}
 
 .map {
 	height: 500px;

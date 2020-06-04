@@ -1,5 +1,5 @@
 const apiKey = '18c5202b88ce01926c8701685e567bb4'
-const apiUrl = 'http://api.openweathermap.org/data/2.5/weather?'
+const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?'
 
 let tempUnit = 'C'
 
@@ -96,21 +96,17 @@ const getFutureWeather = (lat, lon) => {
 					${forecastDays[0]}
 				</div> 
 				<div>
+					<span>${temps[0]}</span>
 					<img src='http://openweathermap.org/img/wn/${data.daily[1].weather[0].icon}.png' alt=${data.daily[1].weather[0].description}/>
 				</div>	
-				<div>
-					${temps[0]}
-				</div>
 			</div>
 			<div class='day-two'>
 				<div>
 					${forecastDays[1]}
 				</div> 
 				<div>
+					<span>${temps[1]}</span>
 					<img src='http://openweathermap.org/img/wn/${data.daily[2].weather[0].icon}.png' alt=${data.daily[2].weather[0].description}/>
-				</div>	
-				<div>
-					${temps[0]}
 				</div>
 			</div>
 			<div class='day-three'>
@@ -118,11 +114,9 @@ const getFutureWeather = (lat, lon) => {
 					${forecastDays[2]}
 				</div> 
 				<div>
+					<span>${temps[2]}</span>
 					<img src='http://openweathermap.org/img/wn/${data.daily[2].weather[0].icon}.png' alt=${data.daily[2].weather[0].description}/>
 				</div>	
-				<div>
-					${temps[0]}
-				</div>
 			</div>
 			`
 	})
