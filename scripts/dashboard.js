@@ -10,7 +10,7 @@ const getImages = (random) => {
 	.then(data => {
 		console.log(data)
 		if (random !== true) {
-			document.body.style.backgroundImage = `url(${data.photos.photo[0].url_h})`
+			document.body.style.backgroundImage = `url(${data.photos.photo[Math.floor(Math.random() * 100)].url_h}})`
 		} else {
 			setTimeout(document.body.style.backgroundImage = `url(${data.photos.photo[Math.floor(Math.random() * 100)].url_h})`, 330)
 			

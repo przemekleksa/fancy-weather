@@ -1,5 +1,5 @@
 const apiKey = '18c5202b88ce01926c8701685e567bb4'
-const apiUrl = 'http://api.openweathermap.org/data/2.5/weather?'
+const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?'
 
 let tempUnit = 'C'
 
