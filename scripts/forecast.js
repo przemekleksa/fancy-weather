@@ -127,3 +127,14 @@ const getFutureWeather = (lat, lon) => {
 			`
 	})
 }
+
+
+// const getImages = () => {
+// 	fetch('https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=bcffbae651feec2b6a7575e7eb3136d5&tags=nature,spring,morning&tag_mode=all&extras=url_h&format=json&nojsoncallback=1')
+// 	.then(response => response.json())
+// 	.then(data => {
+// 		console.log(data)
+// 	})
+// }
+
+// getImages()

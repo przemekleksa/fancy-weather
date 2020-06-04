@@ -7,12 +7,13 @@ body {
  justify-content: center;
  font-family: 'Roboto', sans-serif;
  margin: 0 auto;
+ background-size:cover;
 }
 
 .dashboard {
 	display: flex;
-	/* flex: 1 0 100%; */
-	/* justify-content: center; */
+	flex: 1 0 100%;
+	justify-content: center;
 }
 
 .dashboard > div {
@@ -34,6 +35,9 @@ body {
 .weather-now {
 	flex: 1 1 auto;
 	margin: 0 50px 0 0;
+	height: 540px;
+	background-color: rgba(209, 209, 209, 0.397);
+	padding: 20px;
 }
 
 .place {
@@ -63,7 +67,7 @@ body {
 
 
 .future-weather {
-	padding: 20px 0 0 0;
+	padding: 50px 0 0 0;
 	display: flex;
 	justify-content: space-between;
 	font-size: 1.3rem;
@@ -83,4 +87,10 @@ body {
 }
 .coord {
 	text-align: right;
+}
+
+.map-and-coord {
+	background-color: rgba(209, 209, 209, 0.397);
+	padding: 20px;
+	height: 540px;
 }
