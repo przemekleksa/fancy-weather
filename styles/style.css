@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ font-family: 'Roboto', sans-serif;
+ margin: 0 auto;
+}
+
+.dashboard {
+	display: flex;
+	/* flex: 1 0 100%; */
+	/* justify-content: center; */
+}
+
+.dashboard > div {
+	
+}
+
+.search {
+	
+}
+
+.search form {
+	
+}
+
+.container {
+	display: flex;
+}
+
+.weather-now {
+	flex: 1 1 auto;
+	margin: 0 50px 0 0;
+}
+
+.place {
+	font-size: 3rem;
+	margin: 0;
+}
+.clock {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+.forecast {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+.forecast-degrees {
+	font-size: 10rem;
+	align-self: center;
+}
+
+.forecast-details {
+	font-size: 1.3rem;
+}
+
+
+.future-weather {
+	padding: 20px 0 0 0;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.3rem;
+}
+
+.future-weather > div {
+	margin: 0 30px 0 0;
+}
+
+.future-weather > div:last-child {
+	margin: 0 0 0 0;
+}
+
+.map {
+	height: 500px;
+	width: 400px;
+}
+.coord {
+	text-align: right;
+}
