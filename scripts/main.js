@@ -8,18 +8,29 @@ const container = document.createElement('div')
 container.classList.add('container')
 
 
-let dashboard = document.createElement('div')
+const dashboard = document.createElement('div')
 dashboard.classList.add('dashboard')
 const refresh = document.createElement('div')
 refresh.classList.add('refresh')
 const language = document.createElement('div')
 language.classList.add('language')
+const language2 = document.createElement('div')
+language2.classList.add('language')
 const degreeUnit = document.createElement('div')
 degreeUnit.classList.add('degree-unit')
 
-dashboard.appendChild(refresh)
-dashboard.appendChild(language)
-dashboard.appendChild(degreeUnit)
+const controls = document.createElement('div')
+controls.classList.add('controls')
+
+// controls.appendChild
+
+
+controls.appendChild(refresh)
+controls.appendChild(language)
+controls.appendChild(language2)
+controls.appendChild(degreeUnit)
+
+dashboard.appendChild(controls)
 
 const search = document.createElement('div')
 search.classList.add('search')
@@ -36,7 +47,10 @@ const place = document.createElement('h2')
 place.classList.add('place')
 const clock = document.createElement('p')
 clock.classList.add('clock')
+const day = document.createElement('div')
+day.classList.add('day')
 weatherNow.appendChild(place)
+weatherNow.appendChild(day)
 weatherNow.appendChild(clock)
 
 const forecast = document.createElement('div')
@@ -68,8 +82,6 @@ map.classList.add('map')
 map.setAttribute('id', 'map')
 const coord = document.createElement('div')
 coord.classList.add('coord')
-// map.appendChild(document.createElement('div'))
-// map.appendChild(coord)
 
 const weatherAndMap = document.createElement('div')
 
@@ -87,3 +99,9 @@ weatherAndMap.appendChild(mapAndCoord)
 
 document.body.appendChild(weatherAndMap)
 
+let viewportWidth = window.innerWidth || document.documentElement.clientWidth
+
+if (viewportWidth < 400) {
+	let forecastImg = document.getElementsByClassName('forecast-icon')
+	console.log(forecastImg.textContent)
+}
