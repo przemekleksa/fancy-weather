@@ -307,9 +307,6 @@ body {
 		display: flex;
 		justify-content: center
 	}
-	.search {
-		justify-content: center;
-	}
 	.weather-now {
 		padding: 0;
 	}

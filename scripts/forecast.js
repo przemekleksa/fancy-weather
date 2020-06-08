@@ -135,10 +135,22 @@ function geoError() {
 
 const getLanLon = (lat, lon, currentLanguage) => {
 	// console.log(apiUrl + 'lat=' + lat + '&lon=' + lon +'&apiKey=' + apiKey + '&lang=pl')
-	fetch(apiUrl + 'lat=' + lat + '&lon=' + lon +'&apiKey=' + apiKey + '&lang=en')
+	let oppositeLanguage  = ''
+	if (currentLanguage === 'en') {
+		oppositeLanguage = 'pl'
+	}
+	if (currentLanguage === 'pl') {
+		oppositeLanguage = 'en'
+	}
+	fetch(apiUrl + 'lat=' + lat + '&lon=' + lon +'&apiKey=' + apiKey + '&lang=' + oppositeLanguage)
 	.then(response => response.json())
 	.then(data => {
-		polishWeatherDescription = data.weather[0].description
+		if (oppositeLanguage === 'en'){
+			englishWeatherDescription = data.weather[0].description
+		}
+		if (oppositeLanguage === 'pl') {
+			polishWeatherDescription = data.weather[0].description
+		}
 	})
 	// console.log(currentLanguage)
 	fetch(apiUrl + 'lat=' + lat + '&lon=' + lon +'&apiKey=' + apiKey + '&lang=' + currentLanguage)
@@ -147,8 +159,13 @@ const getLanLon = (lat, lon, currentLanguage) => {
 		console.log(data)
 		let timezone = data.timezone
 		getTimezone(timezone)
-
-		englishWeatherDescription = data.weather[0].description
+		if (currentLanguage === 'en'){
+			englishWeatherDescription = data.weather[0].description
+		}
+		if (currentLanguage === 'pl') {
+			polishWeatherDescription = data.weather[0].description
+		}
+		
 
 		// place.textContent = data.name
 		let feelsLike = Math.round(data.main.feels_like - 273.15)
