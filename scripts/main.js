@@ -1,9 +1,3 @@
-let body = document.getElementsByName('BODY')
-
-// let node = document.createTextNode("This is new.");
-// let switches = document.createElement('p')
-// switches.appendChild(node);
-
 const container = document.createElement('div')
 container.classList.add('container')
 
@@ -21,8 +15,6 @@ degreeUnit.classList.add('degree-unit')
 
 const controls = document.createElement('div')
 controls.classList.add('controls')
-
-// controls.appendChild
 
 
 controls.appendChild(refresh)
@@ -96,12 +88,4 @@ mapAndCoord.appendChild(coord)
 
 weatherAndMap.appendChild(mapAndCoord)
 
-
 document.body.appendChild(weatherAndMap)
-
-let viewportWidth = window.innerWidth || document.documentElement.clientWidth
-
-if (viewportWidth < 400) {
-	let forecastImg = document.getElementsByClassName('forecast-icon')
-	console.log(forecastImg.textContent)
-}

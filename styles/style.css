@@ -9,6 +9,8 @@ body {
  margin: 0 auto;
  background-size:cover;
  overflow-x: hidden;
+ background-color: rgba(0, 0, 0, 0.719);
+ /* background: url("https://live.staticflickr.com/65535/49973716498_40885da85f_h.jpg") */
 }
 
 .dashboard {
