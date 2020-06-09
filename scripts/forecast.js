@@ -252,6 +252,7 @@ const getFutureWeather = (lat, lon) => {
 function geoSuccess(position) {
 	const { latitude } = position.coords
 	const { longitude } = position.coords
+	console.log(position.coords)
 	latitudeLongitude = [latitude, longitude]
 	coord.innerHTML = `Latitude: ${latitude.toFixed(2).split('.').join('°')}'<br/>Longitude: ${longitude.toFixed(2).split('.').join('°')}'`
 	getLanLon(latitude, longitude, currentLanguage)
