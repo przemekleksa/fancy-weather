@@ -44,8 +44,6 @@ const updateDate = (lang, extraDay = 0) => {
 			now.getDate() + extraDay,
 			polishMonths[now.getMonth()]].join(' ')
 	}
-
-	// day.innerHTML = `${date} ${(new Date().getFullYear()).toString()}`
 	
 	let day = `${date} ${(new Date().getFullYear()).toString()}`
 	return day
